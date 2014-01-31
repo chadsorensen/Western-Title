@@ -1,0 +1,71 @@
+body {
+  padding-top: 70px; }
+
+#heroCarousel .carousel-inner .item img {
+  width: 100%;
+  max-width: inherit; }
+
+.content-container {
+  width: 980px;
+  margin: 0 auto 45px;
+  padding: 20px;
+  background: #ddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .content-container .row {
+    margin: 0; }
+  .content-container .column {
+    width: 220px;
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    margin: 0 20px 20px 0;
+    background: #fff;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .content-container .column.last-child {
+      margin-right: 0; }
+    .content-container .column .icon {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      width: 60px;
+      height: 60px;
+      background: #eee;
+      border-radius: 30px; }
+      .content-container .column .icon:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -16px 0 0 -12px;
+        width: 24px;
+        height: 32px;
+        background: url(../img/icon-list.png) no-repeat; }
+    .content-container .column h2 {
+      font-size: 17px; }
+    .content-container .column p {
+      font-size: 12px; }
+
+#trends {
+  padding: 20px 0;
+  background: #ddd; }
+  #trends .content-container {
+    background: #f2f2f2; }
+    #trends .content-container .trends-container {
+      display: inline-block;
+      width: 48%;
+      background: #fff;
+      overflow: hidden; }
+      #trends .content-container .trends-container img {
+        display: block;
+        float: left; }
+      #trends .content-container .trends-container .content {
+        display: block;
+        float: left;
+        padding: 25px 0 0 15px;
+        width: 125px; }

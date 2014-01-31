@@ -1,0 +1,95 @@
+
+body {
+  padding-top: 70px;
+}
+
+#heroCarousel {
+  .carousel-inner {
+    .item {
+      img {
+        width: 100%;
+        max-width: inherit;
+      }
+    }
+  }
+}
+
+.content-container {
+  width: 980px;
+  margin: 0 auto 45px;
+  padding: 20px;
+  background: #ddd;
+  @include box-sizing(border-box);
+  .row {
+    margin: 0;
+  }
+  .column {
+    width: 220px;
+    display: block;
+    float: left;
+    padding: 15px 20px;
+    margin: 0 20px 20px 0;
+    background: #fff;
+    text-align: center;
+    @include box-sizing(border-box);
+    &.last-child {
+      margin-right: 0;
+    }
+    .icon {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      @include size(60);
+      background: #eee;
+      border-radius: 30px;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -16px 0 0 -12px;
+        @include size(24 32);
+        background: url(img/icon-list.png) no-repeat;
+      }
+    }
+    h2 {
+      font-size: 17px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+#trends {
+  padding: 20px 0;
+  background: #ddd;
+  .content-container {
+    background: #f2f2f2;
+    header {
+      h1 {
+
+      }
+      a {
+
+      }
+    }
+    .trends-container {
+      display: inline-block;
+      width: 48%;
+      background: #fff;
+      overflow: hidden;
+      img {
+        display: block;
+        float: left;
+      }
+      .content {
+        display: block;
+        float: left;
+        padding: 25px 0 0 15px;
+        width: 125px;
+      }
+    }
+  }
+}
