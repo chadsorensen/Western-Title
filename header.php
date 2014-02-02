@@ -34,12 +34,12 @@
     </nav>
     <nav id="main-navigation">
       <ul class="">
-        <li class="active"><a href="#" class="first">What is Title &amp; Escrow &#8595;</a></li>
-        <li><a href="#about">Locations <span>&#8595;</span></a></li>
-        <li><a href="#contact">About Us &#8595;</a></li>
+        <li class="active dropdown"><a href="#" class="first dropdown-toggle">What is Title &amp; Escrow</a></li>
+        <li class="dropdown"><a href="#locations" class="dropdown-toggle">Locations</span></a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>

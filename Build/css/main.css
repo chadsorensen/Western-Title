@@ -171,6 +171,18 @@ a {
             color: #fff; }
           #header #main-navigation ul li a span {
             font-family: "HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif"; }
+      #header #main-navigation ul .dropdown .dropdown-toggle {
+        position: relative; }
+        #header #main-navigation ul .dropdown .dropdown-toggle:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          margin-top: -4px;
+          width: 11px;
+          height: 13px;
+          background: url(../img/icon-arrow-down.png) no-repeat; }
       #header #main-navigation ul .dropdown:hover .dropdown-menu {
         display: block; }
       #header #main-navigation ul .dropdown .dropdown-menu {
@@ -291,6 +303,7 @@ a {
         #trends .content-container .trends-container .content p {
           font-size: 12px; }
           #trends .content-container .trends-container .content p.date {
+            margin: 10px 0;
             font-family: "MetaOT-NormalItalic"; }
 
 #locations {
@@ -446,6 +459,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 3px; }
   #footer h3 {
+    margin-bottom: 0;
     font-size: 13px;
     color: #fff; }
     #footer h3 a {
@@ -459,7 +473,12 @@ a {
   #footer #legal {
     background: #000; }
     #footer #legal h3 {
+      margin-bottom: 10px;
       color: #fff; }
+    #footer #legal a {
+      text-decoration: underline; }
+    #footer #legal .copyright {
+      margin-top: 10px; }
 
 @media screen and (max-width: 950px) {
   .content-container {
