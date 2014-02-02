@@ -1,0 +1,54 @@
+// ==========================================================================
+// ★ CUSTOM FONTS
+// ==========================================================================
+@include font-face(MetaOT-Medium, '../fonts/MetaOT-Medium', normal, normal);
+@include font-face(MetaOT-NormalItalic, '../fonts/'MetaOT-NormalItalic, normal, normal);
+@include font-face(MetaSerifOT-Book, '../fonts/MetaSerifOT-Book', normal, normal);
+@include font-face(MetaSerifOT-BookIta, '../fonts/MetaSerifOT-BookIta', normal, normal);
+@include font-face(MetaSerifOT-Medi, '../fonts/MetaSerifOT-Medi', normal, normal);
+
+$metaMedium: 'MetaOT-Medium';
+$metaItalic: 'MetaOT-NormalItalic';
+$metaSerifOT-Book: 'MetaSerifOT-Book';
+$metaSerifOT-BookIta: 'MetaSerifOT-BookIta';
+$MetaSerifOT-Medi: 'MetaSerifOT-Medi';
+$helvetica: "HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif";
+
+
+// ==========================================================================
+// ★ CUSTOM MIXINS
+// ==========================================================================
+@mixin opacity ( $value: 0.5 ) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)";
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@mixin antialias {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+// ==========================================================================
+// ★ BREAKPOINTS VARIABLES
+// ==========================================================================
+$tablet: 950px;
+$mobile: 550px;
+
+// ==========================================================================
+// ★ HELPERS
+// ==========================================================================
+
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}

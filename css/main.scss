@@ -1,40 +1,185 @@
+@import "_variables";
+@import "neat/neat";
+@import "_grid";
 
 body {
-  padding-top: 70px;
+  color: #000;
+  @include antialias;
+  font-family: $metaMedium;
 }
 
-#heroCarousel {
-  .carousel-inner {
-    .item {
-      img {
-        width: 100%;
-        max-width: inherit;
+// ==========================================================================
+// ★ RESETS
+// ==========================================================================
+section {
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, a {
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  @include transition(all ease-in .35s);
+}
+
+// ==========================================================================
+// ★ DEFAULTS
+// ==========================================================================
+.content-container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// ==========================================================================
+// ★ MAIN NAVIGATION
+// ==========================================================================
+#header {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  overflow: visible;
+  h1 {
+    display: block;
+    @include size(290 100);
+    background: url(img/logo.jpg) no-repeat;
+  }
+  .user-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 13px 30px;
+    background: #f2f2f2;
+    overflow: hidden;
+    span,
+    a {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      font-family: $metaMedium;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #555;
+    }
+    span {
+      padding: 0 5px;
+    }
+  }
+  #main-navigation {
+    font-family: $metaSerifOT-Book;
+    font-size: 16px;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: inline-table;
+      li {
+        display: block;
+        float: left;
+        a {
+          display: block;
+          padding: 10px 15px;
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+          span {
+            font-family: $helvetica;
+          }
+        }
+      }
+      .dropdown {
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          background: #fff;
+          li {
+            float: none;
+            a {
+              padding: 10px 15px;
+              background: #fff;
+              &:hover {
+                background: #f2f2f2;
+                color: #000;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
-.content-container {
-  width: 980px;
-  margin: 0 auto 45px;
-  padding: 20px;
-  background: #ddd;
-  @include box-sizing(border-box);
-  .row {
-    margin: 0;
+// ==========================================================================
+// ★ HERO CAROUSEL
+// ==========================================================================
+
+#heroCarousel {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  img {
+    width: 100%;
   }
+}
+
+// ==========================================================================
+// ★ TOOLS SECTION
+// ==========================================================================
+#tools {
+  .content-container {
+    margin: 0 auto 45px;
+    padding-bottom: 0;
+    background: #ddd;
+    @include box-sizing(border-box);
+    overflow: hidden;
+  }
+
+  .dashboard {
+    margin-bottom: 20px;
+    font-family: $metaMedium;
+    border-bottom: 1px solid #999;
+    overflow: hidden;
+    h1 {
+      padding: 9px 30px 10px 10px;
+      float: left;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    nav {
+      float: left;
+      li {
+        display: inline-block;
+        padding: 20px 15px;
+        &.middle {
+          border-right: 1px solid #999;
+          border-left: 1px solid #999;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
   .column {
-    width: 220px;
-    display: block;
-    float: left;
-    padding: 15px 20px;
-    margin: 0 20px 20px 0;
+    margin-bottom: 20px;
+    padding: 15px 10px;
     background: #fff;
     text-align: center;
-    @include box-sizing(border-box);
-    &.last-child {
-      margin-right: 0;
-    }
     .icon {
       display: block;
       position: relative;
@@ -59,25 +204,45 @@ body {
     p {
       font-size: 12px;
     }
+    &:hover {
+      background: #000;
+      color: #fff;
+      .icon {
+        background: #fff;
+      }
+    }
   }
 }
+
+// ==========================================================================
+// ★ TRENDS SECTION
+// ==========================================================================
 
 #trends {
   padding: 20px 0;
   background: #ddd;
   .content-container {
     background: #f2f2f2;
+    overflow: hidden;
+    padding: 20px;
     header {
+      overflow: hidden;
       h1 {
-
+        display: inline-block;
+        margin: 15px 15px 15px 0;
+        font-size: 16px;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: 3px;
       }
       a {
-
+        display: inline-block;
+        font-size: 11px;
       }
     }
     .trends-container {
-      display: inline-block;
-      width: 48%;
+      width: 48.82117%;
+      margin-right: 2.35765%;
       background: #fff;
       overflow: hidden;
       img {
@@ -87,9 +252,215 @@ body {
       .content {
         display: block;
         float: left;
-        padding: 25px 0 0 15px;
-        width: 125px;
+        padding: 15px 0 0 15px;
+        width: 150px;
+        h2 {
+          margin: 0;
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+          &.date {
+            font-family: $metaItalic;
+          }
+        }
       }
     }
+  }
+}
+
+// ==========================================================================
+// ★ LOCATIONS
+// ==========================================================================
+#locations {
+  overflow: visible;
+  &:after {
+    @include clearfix;
+  }
+  .content-container {
+    padding: 20px 0;
+    &:after {
+      @include clearfix;
+    }
+  }
+  .locations-container,
+  .contact-container {
+    padding: 20px;
+    background: #eee;
+    h1 {
+      display: inline-block;
+      margin: 15px 15px 15px 0;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    p,
+    a {
+      display: inline-block;
+      font-size: 11px;
+    }
+  }
+  .dropdown-container {
+    position: relative;
+    .dropdown-placeholder {
+      padding: 11px 15px;
+      background: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      @include transition(all ease-in .35s);
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include size(40);
+        background: #555;
+      }
+      &:hover {
+        background: #555;
+        color: #fff;
+      }
+      &:hover + .dropdown-menu {
+        display: block;
+      }
+    }
+    .dropdown-menu {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: none;
+      &:hover {
+        display: block;
+      }
+      li {
+        display: block;
+        a {
+          display: block;
+          padding: 15px;
+          background: #fff;
+          &:hover {
+            background: #F2F2F2;
+          }
+        }
+      }
+    }
+  }
+}
+// ==========================================================================
+// ★ MODAL
+// ==========================================================================
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  background: rgba(0,0,0, .66);
+  .modal-container {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-left: -290px;
+    width: 580px;
+    .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include size(40);
+      background: #333;
+      color: #fff;
+      border: none;
+      z-index: 2;
+    }
+  }
+  header {
+    h1 {
+      position: relative;
+      margin: 0;
+      padding: 40px 0 40px 100px;
+      background: #000;
+      color: #fff;
+      .icon {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        @include size(60);
+        background: #fff;
+        border-radius: 30px;
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -16px 0 0 -12px;
+          @include size(24 32);
+          background: url(img/icon-list.png) no-repeat;
+        }
+      }
+    }
+  }
+}
+// ==========================================================================
+// ★ FOOTER SECTION
+// ==========================================================================
+#footer {
+  .content-container {
+    overflow: hidden;
+  }
+  h1 {
+    display: inline-block;
+    margin: 15px 15px 15px 0;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  h3 {
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  a,
+  p {
+    color: #adadad;
+  }
+  #footer-links {
+    background: #555;
+  }
+
+  #legal {
+    background: #000;
+  }
+}
+// ==========================================================================
+// ★ BREAKPOINTS
+// ==========================================================================
+
+@media screen and (max-width: $tablet) {
+  .content-container {
+    width: 100%;
+  }
+  .col-3-6 {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .content-container {
+    width: 100%;
+  }
+  .col-6-12,
+  .col-3-6 {
+    @include span-columns(12);
+    @include omega();
   }
 }
