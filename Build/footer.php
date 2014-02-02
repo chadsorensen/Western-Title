@@ -40,7 +40,7 @@
 
           <div class="column col-3-6">
             <h3><a href="#" title="">Contact Us</a></h3>
-            <h3><a href="#" title="">Account Login</a></h3>
+            <h3><a href="#" title="">Account Login</a> / <a href="#" title="">Register</a></h3>
           </div>
 
         </div>

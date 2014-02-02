@@ -5,7 +5,6 @@
 </section>
 <section id="tools">
   <div class="content-container">
-
     <header class="dashboard">
       <h1>Tool Dashboard</h1>
       <nav>
@@ -95,7 +94,7 @@
     <div class="contact-container col-6-12">
       <span class="dash ir"></span>
       <h3>Stay in Touch</h3>
-      <a href="#" title="">Sign up for classes, trends &amp; news</a>
+      <a href="#" class="signup modal-button" title="">Sign up for classes, trends &amp; news</a>
     </div>
 
   </div>
@@ -105,7 +104,7 @@
 <section id="modal">
 
   <div class="modal-container">
-    <button class="close-button ir" type="button">x</button>
+    <button class="close-button" type="button">x</button>
 
     <div class="modal-content">
       <header class="modal-header">

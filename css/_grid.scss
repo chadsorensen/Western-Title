@@ -19,6 +19,6 @@
 .col-6-12 {
   @include span-columns(6);
 }
-.col-6-12:nth-of-type(2) {
+.col-6-12:nth-of-type(2n) {
   margin-right: 0;
 }
