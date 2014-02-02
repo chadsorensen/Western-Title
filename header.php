@@ -27,12 +27,16 @@
   <section id="header">
     <h1 class="logo ir">Western Title &amp; Escrow</h1>
     <h2 class="tagline">A partnership <em>beyond expectations</em>.</h2>
-    <nav class="user-login">
+    <nav class="user-login side-content">
       <a href="#" title="">account login</a>
       <span> / </span>
       <a href="#" title="">register</a>
     </nav>
-    <nav id="main-navigation">
+    <nav class="mobile">
+      <button class="btn-profile btn-flyout ir" data-section=".user-login" type="button">profile</button>
+      <button class="btn-navigation btn-flyout ir" data-section="#main-navigation" type="button">main navigation</button>
+    </nav>
+    <nav id="main-navigation" class="side-content">
       <ul class="">
         <li class="active dropdown"><a href="#" class="first dropdown-toggle">What is Title &amp; Escrow</a></li>
         <li class="dropdown"><a href="#locations" class="dropdown-toggle">Locations</span></a></li>
