@@ -527,6 +527,44 @@ button {
     }
   }
 }
+
+// ==========================================================================
+// ★ TEAM DIRECTORY SECTION
+// ==========================================================================
+
+.header-bar {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 35px 0 35px 30px;
+  background: #f2f2f2;
+  @include box-sizing(border-box);
+  h1 {
+    margin: 0;
+    font-family: $metaSerifOT-BookIta;
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+.team-item {
+  img {
+    border: 1px solid #bbb;
+  }
+  h3 {
+    margin: 0;
+    font-size: 15px;
+  }
+  h4 {
+    margin: 0;
+    font-family: $metaItalic;
+    font-size: 13px;
+  }
+  a {
+    font-size: 13px;
+    text-decoration: underline;
+  }
+}
+
+
 // ==========================================================================
 // ★ FOOTER SECTION
 // ==========================================================================
@@ -606,12 +644,16 @@ button {
     margin: 0 auto;
   }
   .col-2-12,
+  .col-2_5-4-12,
   .col-4-12,
   .col-6-12,
   .col-8-12,
   .col-3-6 {
     @include span-columns(12);
     @include omega();
+    img {
+      width: 100%;
+    }
   }
 
 // Mobile Navigation
