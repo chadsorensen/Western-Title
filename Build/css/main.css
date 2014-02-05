@@ -60,6 +60,14 @@
   .col-4-12:last-child {
     margin-right: 0; }
 
+.col-8-12 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .col-8-12:last-child {
+    margin-right: 0; }
+
 .col-3-6 {
   float: left;
   display: block;
@@ -119,6 +127,43 @@ button:focus {
   width: 980px;
   margin: 0 auto;
   padding: 20px; }
+
+.main-banner {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.main-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.main-content {
+  font-family: "MetaOT-Medium"; }
+  .main-content h2 {
+    font-size: 16px; }
+  .main-content p {
+    color: #555;
+    font-size: 13px; }
+
+.title-content h1 {
+  font-family: "MetaSerifOT-BookIta";
+  font-size: 28px; }
+.title-content p {
+  font-family: "MetaOT-Medium";
+  font-size: 16px; }
+
+.sidebar .sidebar-container {
+  background: #f2f2f2;
+  padding: 20px;
+  overflow: hidden; }
+  .sidebar .sidebar-container img {
+    max-width: 100%; }
+.sidebar h2 {
+  font-size: 16px; }
+.sidebar .content {
+  background: #fff; }
 
 #header {
   position: relative;
@@ -503,12 +548,15 @@ button:focus {
     .col-3-6:nth-child(2n+1) {
       clear: left; } }
 @media screen and (max-width: 550px) {
+  .main-wrapper,
   .content-container {
-    width: 100%; }
+    width: 90%;
+    margin: 0 auto; }
 
   .col-2-12,
   .col-4-12,
   .col-6-12,
+  .col-8-12,
   .col-3-6 {
     float: left;
     display: block;
@@ -518,6 +566,7 @@ button:focus {
     .col-2-12:last-child,
     .col-4-12:last-child,
     .col-6-12:last-child,
+    .col-8-12:last-child,
     .col-3-6:last-child {
       margin-right: 0; }
 

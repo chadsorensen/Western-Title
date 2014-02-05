@@ -1,7 +1,7 @@
 <?php include 'header.php' ?>
 
 <section id="heroCarousel">
-  <img src="img/slider-1.jpg" alt="">
+  <img src="images/slider-1.jpg" alt="">
 </section>
 <section id="tools">
   <div class="content-container">
@@ -53,7 +53,7 @@
     </header>
 
     <div class="trends-container col-6-12">
-      <img src="img/trends-1.jpg" alt="">
+      <img src="images/trends-1.jpg" alt="">
       <div class="content">
         <h2>Infographic Title</h2>
         <p class="date">Jan. 1, 2014</p>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="trends-container col-6-12">
-      <img src="img/trends-2.jpg" alt="">
+      <img src="images/trends-2.jpg" alt="">
       <div class="content">
         <h2>Infographic Title</h2>
         <p class="date">Jan. 1, 2014</p>

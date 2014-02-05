@@ -9,6 +9,10 @@
   @include span-columns(4);
 }
 
+.col-8-12 {
+  @include span-columns(8);
+}
+
 .col-3-6 {
   @include span-columns(3);
 }
