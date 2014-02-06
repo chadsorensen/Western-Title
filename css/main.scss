@@ -102,10 +102,22 @@ button {
     background: url(images/icon-arrow-right.png) no-repeat;
   }
 }
+.icon-arrow-right-white {
+  &:after {
+    @include size(15);
+    background: url(images/icon-arrow-right-white.png) no-repeat;
+  }
+}
 .icon-arrow-down-white {
   &:after {
     @include size(17);
     background: url(images/icon-arrow-down-right.png) no-repeat;
+  }
+}
+.icon-team-directory {
+  &:after {
+    @include size(50 30);
+    background: url(images/icon-team-directory.png) no-repeat;
   }
 }
 // ==========================================================================
@@ -557,6 +569,47 @@ button {
   }
 }
 // ==========================================================================
+// ★ TEAM DIRECTORY SECTION
+// ==========================================================================
+
+.header-bar {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 35px 0 35px 30px;
+  background: #f2f2f2;
+  @include box-sizing(border-box);
+  &:after {
+    top: 50%;
+    right: 20px;
+    margin-top: -15px;
+  }
+  h1 {
+    margin: 0;
+    font-family: $metaSerifOT-BookIta;
+    font-size: 28px;
+    line-height: 1;
+  }
+}
+.team-item {
+  img {
+    border: 1px solid #bbb;
+  }
+  h3 {
+    margin: 0;
+    font-size: 15px;
+  }
+  h4 {
+    margin: 0;
+    font-family: $metaItalic;
+    font-size: 13px;
+  }
+  a {
+    font-size: 13px;
+    text-decoration: underline;
+  }
+}
+
+// ==========================================================================
 // ★ MODAL
 // ==========================================================================
 #modal {
@@ -614,43 +667,6 @@ button {
     }
   }
 }
-
-// ==========================================================================
-// ★ TEAM DIRECTORY SECTION
-// ==========================================================================
-
-.header-bar {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 35px 0 35px 30px;
-  background: #f2f2f2;
-  @include box-sizing(border-box);
-  h1 {
-    margin: 0;
-    font-family: $metaSerifOT-BookIta;
-    font-size: 28px;
-    line-height: 1;
-  }
-}
-.team-item {
-  img {
-    border: 1px solid #bbb;
-  }
-  h3 {
-    margin: 0;
-    font-size: 15px;
-  }
-  h4 {
-    margin: 0;
-    font-family: $metaItalic;
-    font-size: 13px;
-  }
-  a {
-    font-size: 13px;
-    text-decoration: underline;
-  }
-}
-
 
 // ==========================================================================
 // ★ FOOTER SECTION

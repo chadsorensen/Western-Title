@@ -1,5 +1,5 @@
 <?php include 'header.php' ?>
-<div class="header-bar">
+<div class="header-bar icon icon-team-directory">
   <h1>Team Directory</h1>
 </div>
 <div class="main-wrapper">
