@@ -31,6 +31,13 @@ $helvetica: "HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetic
   clear: both;
 }
 
+@mixin before ($width, $height, $display: block, $position: absolute) {
+  content: "";
+  display: $display;
+  position: $position;
+  @include size($width $height);
+}
+
 @mixin antialias {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -42,6 +49,8 @@ $helvetica: "HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetic
 $tablet: 950px;
 $mobile: 550px;
 
+// CUSTOM VARIABLES
+$transition: all ease-in-out .15s;
 // ==========================================================================
 // ★ HELPERS
 // ==========================================================================

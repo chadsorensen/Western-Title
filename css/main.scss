@@ -31,7 +31,7 @@ li {
 a {
   color: inherit;
   text-decoration: none;
-  @include transition(all ease-in-out .15s);
+  @include transition($transition);
 }
 
 button {
@@ -44,8 +44,70 @@ button {
   display: none;
 }
 
-
-
+// ==========================================================================
+// ★ CUSTOM CLASSES
+// ==========================================================================
+.dash {
+  position: relative;
+  &:before {
+    @include before(13, 1);
+    top: -10px;
+    background: #000;
+  }
+}
+.icon {
+  position: relative;
+  &:after {
+    @include before(auto, auto);
+    right: 0;
+  }
+}
+.icon-key {
+  &:after {
+    @include size(34 16);
+    top: 50%;
+    margin-top: -8px;
+    background: url(images/icon-key.png) no-repeat;
+  }
+}
+.icon-line-chart {
+  &:after {
+    @include size(34);
+    top: 50%;
+    margin-top: -17px;
+    background: url(images/icon-line-chart.png) no-repeat;
+  }
+}
+.icon-location {
+  &:after {
+    @include size(20 34);
+    background: url(images/icon-location.png) no-repeat;
+  }
+}
+.icon-mail {
+  &:after {
+    @include size(32 22);
+    background: url(images/icon-mail.png) no-repeat;
+  }
+}
+.icon-list {
+  &:after {
+    @include size(24 32);
+    background: url(images/icon-mail.png) no-repeat;
+  }
+}
+.icon-arrow-right {
+  &:after {
+    @include size(8);
+    background: url(images/icon-arrow-right.png) no-repeat;
+  }
+}
+.icon-arrow-down-white {
+  &:after {
+    @include size(17);
+    background: url(images/icon-arrow-down-right.png) no-repeat;
+  }
+}
 // ==========================================================================
 // ★ DEFAULTS
 // ==========================================================================
@@ -280,7 +342,7 @@ button {
     padding: 15px 10px;
     background: #fff;
     text-align: center;
-    .icon {
+    .item-icon {
       display: block;
       position: relative;
       margin: 0 auto;
@@ -302,12 +364,18 @@ button {
       font-size: 17px;
     }
     p {
+      width: 90%;
+      margin: 0 auto;
       font-size: 12px;
+      &:after {
+        right: 10px;
+        bottom: 2px;
+      }
     }
     &:hover {
       background: #000;
       color: #fff;
-      .icon {
+      .item-icon {
         background: #fff;
       }
     }
@@ -327,6 +395,10 @@ button {
     padding: 20px;
     header {
       overflow: hidden;
+      &:after {
+        top: 20px;
+        right: 7px;
+      }
       h1 {
         display: inline-block;
         margin: 15px 15px 15px 0;
@@ -338,6 +410,10 @@ button {
       a {
         display: inline-block;
         font-size: 11px;
+        &:after {
+          top: 4px;
+          right: -11px;
+        }
       }
     }
     .trends-container {
@@ -384,6 +460,10 @@ button {
   }
   .locations-container,
   .contact-container {
+    &:after {
+      top: 10px;
+      right: 28px;
+    }
     padding: 20px;
     background: #eee;
     h3 {
@@ -421,6 +501,13 @@ button {
     }
 
   }
+
+  .contact-container {
+    &:after {
+      top: 20px;
+      right: 25px;
+    }
+  }
   .dropdown-container {
     position: relative;
     .dropdown-placeholder {
@@ -436,7 +523,7 @@ button {
         top: 0;
         right: 0;
         @include size(40);
-        background: #555;
+        background: #555 url(images/icon-arrow-down-white-1) no-repeat;
       }
       &:hover {
         background: #555;
@@ -618,9 +705,11 @@ button {
       margin-top: 10px;
       font-family: $metaSerifOT-Book;
     }
-
-
-
+  }
+  .dash {
+    &:before {
+      background: #fff;
+    }
   }
 }
 // ==========================================================================

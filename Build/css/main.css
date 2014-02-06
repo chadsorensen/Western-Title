@@ -131,6 +131,66 @@ button:focus {
 .mobile {
   display: none; }
 
+.dash {
+  position: relative; }
+  .dash:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    top: -10px;
+    background: #000; }
+
+.icon {
+  position: relative; }
+  .icon:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    right: 0; }
+
+.icon-key:after {
+  width: 34px;
+  height: 16px;
+  top: 50%;
+  margin-top: -8px;
+  background: url(../images/icon-key.png) no-repeat; }
+
+.icon-line-chart:after {
+  width: 34px;
+  height: 34px;
+  top: 50%;
+  margin-top: -17px;
+  background: url(../images/icon-line-chart.png) no-repeat; }
+
+.icon-location:after {
+  width: 20px;
+  height: 34px;
+  background: url(../images/icon-location.png) no-repeat; }
+
+.icon-mail:after {
+  width: 32px;
+  height: 22px;
+  background: url(../images/icon-mail.png) no-repeat; }
+
+.icon-list:after {
+  width: 24px;
+  height: 32px;
+  background: url(../images/icon-mail.png) no-repeat; }
+
+.icon-arrow-right:after {
+  width: 8px;
+  height: 8px;
+  background: url(../images/icon-arrow-right.png) no-repeat; }
+
+.icon-arrow-down-white:after {
+  width: 17px;
+  height: 17px;
+  background: url(images/icon-arrow-down-right.png) no-repeat; }
+
 .content-container {
   width: 980px;
   margin: 0 auto;
@@ -298,7 +358,7 @@ button:focus {
   padding: 15px 10px;
   background: #fff;
   text-align: center; }
-  #tools .column .icon {
+  #tools .column .item-icon {
     display: block;
     position: relative;
     margin: 0 auto;
@@ -306,7 +366,7 @@ button:focus {
     height: 60px;
     background: #eee;
     border-radius: 30px; }
-    #tools .column .icon:after {
+    #tools .column .item-icon:after {
       content: "";
       display: block;
       position: absolute;
@@ -319,11 +379,16 @@ button:focus {
   #tools .column h2 {
     font-size: 17px; }
   #tools .column p {
+    width: 90%;
+    margin: 0 auto;
     font-size: 12px; }
+    #tools .column p:after {
+      right: 10px;
+      bottom: 2px; }
   #tools .column:hover {
     background: #000;
     color: #fff; }
-    #tools .column:hover .icon {
+    #tools .column:hover .item-icon {
       background: #fff; }
 
 #trends {
@@ -335,6 +400,9 @@ button:focus {
     padding: 20px; }
     #trends .content-container header {
       overflow: hidden; }
+      #trends .content-container header:after {
+        top: 20px;
+        right: 7px; }
       #trends .content-container header h1 {
         display: inline-block;
         margin: 15px 15px 15px 0;
@@ -345,6 +413,9 @@ button:focus {
       #trends .content-container header a {
         display: inline-block;
         font-size: 11px; }
+        #trends .content-container header a:after {
+          top: 4px;
+          right: -11px; }
     #trends .content-container .trends-container {
       background: #fff;
       overflow: hidden; }
@@ -381,6 +452,10 @@ button:focus {
   #locations .contact-container {
     padding: 20px;
     background: #eee; }
+    #locations .locations-container:after,
+    #locations .contact-container:after {
+      top: 10px;
+      right: 28px; }
     #locations .locations-container h3,
     #locations .contact-container h3 {
       display: inline-block;
@@ -411,6 +486,9 @@ button:focus {
         #locations .locations-container a.signup:hover,
         #locations .contact-container a.signup:hover {
           background: #333; }
+  #locations .contact-container:after {
+    top: 20px;
+    right: 25px; }
   #locations .dropdown-container {
     position: relative; }
     #locations .dropdown-container .dropdown-placeholder {
@@ -429,7 +507,7 @@ button:focus {
         right: 0;
         width: 40px;
         height: 40px;
-        background: #555; }
+        background: #555555 url(../images/icon-arrow-down-white-1.png) no-repeat; }
       #locations .dropdown-container .dropdown-placeholder:hover {
         background: #555;
         color: #fff; }
@@ -566,6 +644,8 @@ button:focus {
     #footer #legal .copyright {
       margin-top: 10px;
       font-family: "MetaSerifOT-Book"; }
+  #footer .dash:before {
+    background: #fff; }
 
 @media screen and (max-width: 950px) {
   .content-container {
